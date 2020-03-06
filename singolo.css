@@ -3,60 +3,151 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  width: 3;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 
 /*MAIN*/
 :root {
   --main-nav-bg-color: #2d303a;
-  --additional-nav-bg-color:  #323746;
-  --main-text-nav-color:  #ffffff;
+  --additional-nav-bg-color: #323746;
+  --main-text-nav-color: #ffffff;
   --main-accent-color: #f06c64;
-  --additional-slider-bg-color:  #ea676b;;
+  --additional-slider-bg-color: #ea676b;
+  ;
   --title-color: --#666d89;
-  --text-color: #767e9e    
+  --text-color: #767e9e;
+  --main-services-bg-color: #f2f2f2;
+  --main-services-border-color: #c2c3be
 }
 
 html {
@@ -67,7 +158,7 @@ html {
 .wrapper {
   width: 940px;
   margin: 0 auto;
-} 
+}
 
 .wrapper_flex {
   display: flex;
@@ -86,7 +177,7 @@ h2 {
   font-size: 3rem;
   font-weight: 900;
   line-height: 1.8rem;
-  color:var(--title-color);
+  color: var(--title-color);
 }
 
 h3 {
@@ -114,6 +205,7 @@ a {
   background-color: var(--main-nav-bg-color);
   border-bottom: 6px solid var(--additional-nav-bg-color);
 }
+
 .logo__star {
   color: var(--main-accent-color)
 }
@@ -131,6 +223,7 @@ a {
   margin-left: 28px;
   text-transform: uppercase;
 }
+
 .navigation__item:first-child {
   margin-left: 0;
 }
@@ -143,10 +236,10 @@ a {
 .slider {
   height: 587px;
   background-color: var(--main-accent-color);
-  border-bottom: 15px solid  var(--additional-slider-bg-color);
+  border-bottom: 15px solid var(--additional-slider-bg-color);
 }
 
-.wrapper_slider {
+.slider__wrapper {
   position: relative;
   height: 587px;
 }
@@ -158,45 +251,72 @@ a {
 }
 
 .slider__arrow {
-  position:absolute;
+  position: absolute;
   top: 48%;
+  transition: transform 0.3s ease-out;
 }
-.slider__link-arrow:hover {
-  background-color: var(--additional-nav-bg-color);
+
+.slider__arrow_right {
+  width: 16px;
+  height: 28px;
+  background: url("./assets/chev_right.png");
+}
+
+.slider__arrow_right:hover {
+  transform: translateX(-5px);
 }
 
 .slider__arrow_left {
-  left: 98%;
+  left: 98.5%;
+  width: 16px;
+  height: 28px;
+  background: url("./assets/chev.png");
+}
+
+.slider__arrow_left:hover {
+  transform: translateX(5px);
 }
 
 /*SERVICES*/
 
 .services {
-  padding-top: 65px;
+  padding: 65px 0 33px;
+  border-bottom: 6px solid var(--main-services-border-color);
   text-align: left;
+  background-color: var(--main-services-bg-color);
 }
 
 .services__description {
+  
   padding: 30px 0 43px 0;
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.667;
   text-align: justify;
-  color: var(--text-color);  
+  color: var(--text-color);
+
 }
 
 .services__card-description {
+  max-height: 65px;
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 22px;
+  text-align: justify;
   color: var(--text-color);
+  overflow: hidden;
 }
 
 .layout-3-column {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: flex-start;
+}
+
+.layout-3-column>div {
+  flex: 0 1 300px;
 }
 
 .layout-3-column:first-child {
@@ -208,8 +328,22 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 29px;
+  text-align: justify;
 }
 
 .services__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 60px;
+  /* border: 1px solid blue; */
+  border-radius: 50%;
   margin-right: 18px;
+  padding-left: 2;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
 }
