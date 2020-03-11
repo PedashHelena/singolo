@@ -211,6 +211,7 @@ a {
 .logo {
   padding-bottom: 11px;
 }
+
 .logo__star {
   color: var(--main-accent-color)
 }
@@ -310,7 +311,7 @@ a {
   background-color: var(--main-services-bg-color);
 }
 
-.services__description {  
+.services__description {
   padding: 30px 0 43px 0;
   font-size: 1.8rem;
   font-weight: 300;
